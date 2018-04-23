@@ -1,0 +1,203 @@
+<script>
+    $(function () {
+        // 头部导航栏下拉菜单
+        $("#navPub1").mouseenter(function () {
+            $("#solveWrap1").stop().slideDown(500);
+            $("#solveWrap2").stop().slideUp(500);
+        });
+        $("#navPub2").mouseenter(function () {
+            $("#solveWrap2").slideDown(500);
+            $("#solveWrap1").slideUp(500);
+        });
+        $(".slUP").click(function () {
+            $("#solveWrap1").slideUp(200);
+            $("#solveWrap2").slideUp(200);
+            if($(window).width() < 980) {
+                $("#solveMoreSlide").css("display","block");
+                $("#productsMoreSlide").css("display","block");
+            }
+        });
+//        手机适配菜单显示和隐藏
+        $("#subNav").click(function () {
+            $("#solveWrap1").addClass("solveWrap11").removeClass("solveWrap10");
+            $("#solveWrap2").addClass("solveWrap11").removeClass("solveWrap10");
+            $("#hide").css("display","block");
+            $("#solveMoreSlide").css("display","none");
+            $("#productsMoreSlide").css("display","none");
+        });
+        $("#hide").children().eq(1).click(function () {
+            $("#hide").css("display","none");
+            $("#solveMoreSlide").css("display","block");
+            $("#productsMoreSlide").css("display","block");
+        });
+
+        //    当前元素的标签高亮显示
+        function nav(name, csskey,cssvalue) {
+            //获取当前页的完整地址
+            var url = window.location.pathname + window.location.search;
+            console.log(url);  //     /IN/IN/solve.html?_ijt=se5fp1c7n87m627jlqath20r1f
+            var v1 = "";
+            //遍历头部导航列表的内容
+            $(name).each(function () {
+                //得到每个列表a的地址
+                v1 = $(this).attr("href");
+                //判断当前地址和当前页获取的地址是否匹配,匹配的值不为零
+                if (url.indexOf(v1) != -1) {
+                    $(this).css(csskey, cssvalue);
+//                    $(this).parents("li").css("background-color","rgba(255,255,255,0.1)");
+                };
+            })
+        };
+        nav(".header .header-r ul .navPub a", "color", "red");
+
+        $(".navPub").mouseenter(function () {
+            $(this).children("i").stop().css("width","102px");
+        });
+        $(".navPub").mouseleave(function () {
+            $(this).children("i").stop().css("width","0");
+        });
+    });
+</script>
+
+
+<div class="headerWrap">
+    <div class="header">
+        <div class="headerBox">
+            <div class="logo fl">
+                <a class="logoA" href="index.html">极影</a>
+            </div>
+            <div class="header-r fr">
+                <ul>
+                    <li id="navPub1" class="navPub navPub1" class="headSolve">
+                        <a class="navPuba navPuba1" href="solve.html">解决方案</a>
+                        <i></i>
+                    </li>
+                    <li id="navPub2" class="navPub navPub2">
+                        <a class="navPuba" href="products.html">产品中心</a>
+                        <i></i>
+                    </li>
+                    <li class="navPub"><a class="navPuba" href="javascript:;">服务体系</a><i></i></li>
+                    <li class="navPub"><a class="navPuba" href="success.html">成功案例</a><i></i></li>
+                    <li class="navPub"><a class="navPuba" href="company.html">合作伙伴</a><i></i></li>
+                    <li class="navPub"><a class="navPuba" href="about.html">关于极影</a><i></i></li>
+                </ul>
+            </div>
+            <div id="subNav" class="subNav fr"></div>
+            <!--适配-->
+            <div class="hide" id="hide">
+                <a href="index.html"><div class="logo fl"></div></a>
+                <div class="close fr"></div>
+                <ul>
+                    <a href="solve.html"><li>解决方案</li></a>
+                    <a href="products.html"><li>产品中心</li></a>
+                    <a href="service.html"><li>服务体系</li></a>
+                    <a href="success.html"><li>成功案例</li></a>
+                    <a href="company.html"><li>合作伙伴</li></a>
+                    <a href="about.html"><li>关于极影</li></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bigSolveWrap">
+    <div id="solveWrap1" class="solveWrap1">
+        <div class="solveSlide">
+            <div class="solveUlBox">
+                <ul class="solveUl1">
+                    <li class="solveH4"><h4><a href="#">解决方案</a></h4></li>
+                    <li><a href="#">3D个性化定制解决方案</a></li>
+                    <li><a href="#">政府信息化建设解决方案</a></li>
+                    <li><a href="#">电商多平台一站式解决方案</a></li>
+                    <li><a href="#">微信小程序解决方案</a></li>
+                    <li><a href="#">互联网金融解决方案</a></li>
+                    <li><a href="#">教育平台解决方案</a></li>
+                    <li><a href="#">其他领域</a></li>
+                </ul>
+                <ul class="solveUl2">
+                    <li><h4><a href="#">应用行业</a></h4></li>
+                    <li><a href="#">电子政务</a></li>
+                    <li><a href="#">教育</a></li>
+                    <li><a href="#">电力</a></li>
+                    <li><a href="#">金融</a></li>
+                    <li><a href="#">影视</a></li>
+                    <ul class="solveUl3">
+                        <li><a href="#">互联网</a></li>
+                        <li><a href="#">医疗</a></li>
+                        <li><a href="#">制造</a></li>
+                        <li><a href="#">零售</a></li>
+                        <li><a href="#">酒店</a></li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="solveR solveMg">
+                <h4>移动互联网</h4>
+                <div class="imgWrap">
+                    <img src="images/icon2.png" alt="">
+                </div>
+                <p>
+                    为实现互联网化的用户体验,运营商需要将传统的IT架构向云架构转型,更加敏捷高效,以便快速适应外部需求的变化。
+                </p>
+            </div>
+            <div class="solveR">
+                <h4>3D个性化定制平台解决方案</h4>
+                <div class="imgWrap">
+                    <img src="images/icon2.png" alt="">
+                </div>
+                <p>
+                    为实现互联网化的用户体验,运营商需要将传统的IT架构向云架构转型,更加敏捷高效,以便快速适应外部需求的变化。
+                </p>
+            </div>
+        </div>
+        <div class="slUP">
+            <span class="cltp"></span>
+        </div>
+    </div>
+    <div id="solveWrap2" class="solveWrap2">
+        <div class="solveSlide">
+            <div class="solveS1">
+                <h4>三维数字化</h4>
+                <p>VR展厅和产品的3D展示</p>
+                <div class="imgWrap">
+                    <img src="images/logo1.png" alt="">
+                </div>
+                <a href="javascript:;">查看详情<i></i></a>
+            </div>
+            <div class="solveS1">
+                <h4>画客网</h4>
+                <p>画客网,网画客!</p>
+                <div class="imgWrap">
+                    <img src="images/logo2.png" alt="">
+                </div>
+                <a href="http://www.huakewang.com/">查看详情<i></i></a>
+            </div>
+            <div class="solveS1">
+                <h4>商业联盟</h4>
+                <p>商业资源信息变现!</p>
+                <div class="imgWrap">
+                    <img src="images/logo3.png" alt="">
+                </div>
+                <a href="javascript:;">查看详情<i></i></a>
+            </div>
+            <div class="solveS1">
+                <h4>云报价</h4>
+                <p>让报价和项目促成更快速!</p>
+                <div class="imgWrap">
+                    <img src="images/logo4.png" alt="">
+                </div>
+                <a href="http://www.huakewang.com/2017html/yun.html">查看详情<i></i></a>
+            </div>
+            <div class="solveS1">
+                <h4>Offer+IN </h4>
+                <p>个性定制办公产品</p>
+                <div class="imgWrap">
+                    <img src="images/logo5.png" alt="">
+                </div>
+                <a href="javascript:;">查看详情<i></i></a>
+            </div>
+        </div>
+        <div class="slUP">
+            <span class="cltp"></span>
+        </div>
+    </div>
+</div>
+

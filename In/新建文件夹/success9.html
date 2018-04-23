@@ -1,0 +1,100 @@
+<?php
+/*
+Template Name:success9
+*/
+?>
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>极影科技</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/index.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.easypage.js"></script>
+    <style>
+        #tabWrap {
+            background-color: #fff;
+        }
+        .products {
+            display: none;
+        }
+        .proShowCurrent {
+            display: block !important;
+        }
+    </style>
+    <script type="text/javascript">
+        $(
+            function(){
+                $.easypage({'contentclass':'contentlist','navigateid':'navigatediv','everycount':12,'navigatecount':5});
+            }
+        )
+    </script>
+</head>
+<body style="overflow: scroll;overflow-x: hidden;">
+<div id="header">
+    <?php get_header(); ?>
+</div>
+<div class="bgColor">
+
+</div>
+<div class="tabWrap" id="tabWrap">
+    <div class="seletop">
+        <ul class="jx">
+            <li class="jx1 <?php if(is_page('success1')){echo 'black';} ?>"><a class="<?php if(is_page('success1')){echo 'white';} ?>" href="/htdocs/?page_id=204">精选案例</a></li>
+            <li class="mid <?php if(is_page('success2')){echo 'black';} ?>"><a class=" <?php if(is_page('success2')){echo 'white';} ?>" href="/htdocs/?page_id=207">全部</a></li>
+            <li class="mid <?php if(is_page('success3')){echo 'black';} ?>"><a class=" <?php if(is_page('success3')){echo 'white';} ?>" href="/htdocs/?page_id=213">出行与汽车</a></li>
+            <li class="mid <?php if(is_page('success4')){echo 'black';} ?>"><a class=" <?php if(is_page('success4')){echo 'white';} ?>" href="/htdocs/?page_id=216">手机</a></li>
+            <li class="mid <?php if(is_page('success5')){echo 'black';} ?>"><a class=" <?php if(is_page('success5')){echo 'white';} ?>" href="/htdocs/?page_id=218">移动应用</a></li>
+            <li class="mid <?php if(is_page('success6')){echo 'black';} ?>"><a class=" <?php if(is_page('success6')){echo 'white';} ?>" href="/htdocs/?page_id=220">动态设计</a></li>
+            <li class="mid <?php if(is_page('success7')){echo 'black';} ?>"><a class=" <?php if(is_page('success7')){echo 'white';} ?>" href="/htdocs/?page_id=222">智能家电</a></li>
+            <li class="mid <?php if(is_page('success8')){echo 'black';} ?>"><a class=" <?php if(is_page('success8')){echo 'white';} ?>" href="/htdocs/?page_id=224">品牌传达</a></li>
+            <li class="mid <?php if(is_page('success9')){echo 'black';} ?>"><a class=" <?php if(is_page('success9')){echo 'white';} ?>" href="/htdocs/?page_id=226">医疗健康</a></li>
+            <li class="mid <?php if(is_page('success10')){echo 'black';} ?>"><a class=" <?php if(is_page('success10')){echo 'white';} ?>" href="/htdocs/?page_id=228">新媒体</a></li>
+            <li class="mid <?php if(is_page('success11')){echo 'black';} ?>"><a class=" <?php if(is_page('success11')){echo 'white';} ?>" href="/htdocs/?page_id=230">企业级应用</a></li>
+            <li class="mid <?php if(is_page('success12')){echo 'black';} ?>"><a class=" <?php if(is_page('success12')){echo 'white';} ?>" href="/htdocs/?page_id=232">概念</a></li>
+            <li class="mid <?php if(is_page('success13')){echo 'black';} ?>"><a class=" <?php if(is_page('success13')){echo 'white';} ?>" href="/htdocs/?page_id=234">餐饮</a></li>
+            <li class="mid <?php if(is_page('success14')){echo 'black';} ?>"><a class=" <?php if(is_page('success14')){echo 'white';} ?>" href="/htdocs/?page_id=236">金融</a></li>
+        </ul>
+    </div>
+
+    <div class="products proShowCurrent">
+        <div class="section selected">
+            <ul>
+                <!-- 遍历文章内容添加到列表区 -->
+                <div class="grid_8" id="contents">
+                    <!-- Blog Post -->
+                    <?php query_posts( 'tag=医疗健康'); if (have_posts()) : while (have_posts()) : the_post(); ?>
+                        <a class="contentlist" href="<?php the_permalink(); ?>">
+                            <div class="post lis">
+                                <div class="pros">
+                                    <!-- Post Content -->
+                                    <?php the_content(); ?>
+                                </div>
+                            </div>
+                        </a>
+                    <?php endwhile; ?>
+
+
+                    <?php else : ?>
+                        <h3 class="title"><a href="#" rel="bookmark">未找到</a></h3>
+                        <p>没有找到任何文章！</p>
+                    <?php endif; ?>
+                </div>
+                <div id="navigatediv">
+
+                </div>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+<div class="footer_on">
+    <?php get_footer(); ?>
+</div>
+
+</body>
+</html>

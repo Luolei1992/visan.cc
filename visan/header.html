@@ -1,0 +1,279 @@
+<script src="js/response.js"></script>
+<script>
+    $(function () {
+        // 头部导航栏下拉菜单
+        $("#navPub1").mouseenter(function () {
+            $("#solveWrap1").stop(true, false).slideDown(400);
+        });
+        $("#navPub2").mouseenter(function () {
+            $("#solveWrap2").stop(true, false).slideDown(400);
+        });
+        $("#navPub3").mouseenter(function () {
+            $("#solveWrap3").stop(true, false).slideDown(400);
+        });
+
+        $("#navPub1,#navPub2").mouseleave(function () {
+            $("#solveWrap1").stop(true, false).slideUp(200);
+        });
+        $("#navPub2").mouseleave(function () {
+            $("#solveWrap2").stop(true, false).slideUp(200);
+        });
+        $("#navPub3").mouseleave(function () {
+            $("#solveWrap3").stop(true, false).slideUp(200);
+        });
+        //        手机适配菜单显示和隐藏
+        $("#subNav").click(function () {
+            $("#solveWrap1").addClass("solveWrap11").removeClass("solveWrap10");
+            $("#solveWrap2").addClass("solveWrap11").removeClass("solveWrap10");
+            $("#hide").css("display", "block");
+            $("#solveMoreSlide").css("display", "none");
+            $("#productsMoreSlide").css("display", "none");
+        });
+        $("#hide").children().eq(1).click(function () {
+            $("#hide").css("display", "none");
+            $("#solveMoreSlide").css("display", "block");
+            $("#productsMoreSlide").css("display", "block");
+        });
+
+        //    当前元素的标签高亮显示
+        function nav(name) {
+            //获取当前页的完整地址
+            var url = window.location.pathname + window.location.search;
+            console.log(url);  //     /IN/IN/solve.html?_ijt=se5fp1c7n87m627jlqath20r1f
+            var v1 = "",
+                    v2 = "",
+                    v3 = "",
+                    v4 = "";
+            //遍历头部导航列表的内容
+            $(name).each(function () {
+                //得到每个列表a的地址
+                v1 = $(this).attr("href");
+                v2 = "icon1.html";
+                v3 = "icon2.html";
+                v4 = "icon3.html";
+                //判断当前地址和当前页获取的地址是否匹配,匹配的值不为零
+                if (url.indexOf(v1) != -1) {
+                    $(this).next().addClass("fullwidth");
+
+                }
+                ;
+                //if (url.indexOf(v2) != -1 || url.indexOf(v3) != -1 || url.indexOf(v4) != -1){
+                //  $("#navPub1").find("a").css(csskey, cssvalue);
+                //$("#navPub1").find("a").next().addClass("fullwidth");
+                // }
+            })
+        };
+        nav(".header .header-r ul .navPub a");
+
+        $(".navPub").mouseenter(function () {
+            $(this).children("i").stop().css("width", "98px");
+        });
+        $(".navPub").mouseleave(function () {
+            $(this).children("i").stop().css("width", "0");
+        });
+
+    });
+</script>
+
+
+<style>
+    .gaoLiang {
+        color: red;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .fullwidth {
+        width: 98px !important;
+    }
+</style>
+
+
+<div class="headerWrap">
+    <div class="header">
+        <div class="headerBox">
+            <div class="logo fl">
+                <a class="logoA" href="index.html">
+                    <img class="pcLoge" src="./images/logo.png" alt="" style="width: 100%;height: 100%;">
+                    <img class="mobileLogo" src="./images/mobile-w.png" alt="" style="width: 100%;height: 100%;">
+                </a>
+            </div>
+            <div class="header-r fr">
+                <ul>
+                    <li id="navPub1" class="navPub navPub1" class="headSolve">
+                        <a class="navPuba navPuba1 slideChangeColor" href="solve.html">维善技术</a>
+                        <i></i>
+                        <div id="solveWrap1" class="solveWrap1">
+                            <div class="solveSlide">
+                                <div class="solveUlBox">
+                                    <ul class="solveUl1">
+                                        <li class="solveH4">
+                                            <h4><a href="#">维善技术</a></h4>
+                                        </li>
+                                        <li><a href="technology01.html">虚拟现实</a></li>
+                                        <li><a href="technology03.html">互联网+</a></li>
+                                        <li><a href="technology04.html">+互联网</a></li>
+                                        <li><a href="technology05.html">云技术</a></li>
+                                        <li><a href="technology06.html">大数据</a></li>
+                                    </ul>
+
+                                    <ul class="solveUl1">
+                                        <li class="solveH4">
+                                            <h4><a href="#">解决方案</a></h4>
+                                        </li>
+                                        <li><a href="solve01.html">3D定制购物平台解决方案</a></li>
+                                        <li><a href="solve02.html">VR/AR数字展览馆解决方案</a></li>
+                                        <li><a href="solve03.html">VR样板房解决方案</a></li>
+                                        <li><a href="solve04.html">企业O2O电商平台解决方案</a></li>
+                                        <li><a href="solve05.htmll">手机三维网页解决方案</a></li>
+                                        <li><a href="solve06.html">互联网金融解决方案</a></li>
+                                    </ul>
+                                    <ul class="solveUl1">
+                                        <li class="solveH4">
+                                            <h4><a href="#"> 应用行业</a></h4>
+                                        </li>
+                                        <li><a href="solve01.html">房地产 政府</a></li>
+                                        <li><a href="solve02.html">教育 定制</a></li>
+                                        <li><a href="solve03.html">电商</a></li>
+                                        <li><a href="solve04.html">珠宝</a></li>
+                                        <li><a href="solve05.htmll">家电</a></li>
+                                        <li><a href="solve06.html">互联网</a></li>
+                                    </ul>
+                                    <ul class="solveUl1">
+                                        <li class="solveH4">
+                                            <h4><a href="#"> 热门关键词</a></h4>
+                                        </li>
+                                        <li><a href="solve01.html">房地产</a></li>
+                                        <li><a href="solve02.html">教育</a></li>
+                                        <li><a href="solve03.html">电商</a></li>
+                                        <li><a href="solve04.html">珠宝</a></li>
+                                        <li><a href="solve05.htmll">家电</a></li>
+                                        <li><a href="solve06.html">互联网</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="navPub2" class="navPub navPub2">
+                        <a class="navPuba slideChangeColor" href="icon3.html">维善产品</a>
+                        <i></i>
+                        <div id="solveWrap2" class="solveWrap2">
+                            <div class="solveSlide">
+                                <div class="solveS1">
+                                    <h4>画客网</h4>
+                                    <p>画客网,网画客!</p>
+                                    <div class="imgWrap">
+                                        <img src="./images/logo2.png" alt="">
+                                    </div>
+                                    <a href="product02.html">查看详情<i></i></a>
+                                </div>
+                                <div class="solveS1">
+                                    <h4>商业联盟</h4>
+                                    <p>商业资源信息变现!</p>
+                                    <div class="imgWrap">
+                                        <img src="./images/logo3.png" alt="">
+                                    </div>
+                                    <a href="product03.html">查看详情<i></i></a>
+                                </div>
+                                <div class="solveS1">
+                                    <h4>云报价</h4>
+                                    <p>让报价和项目促成更快速!</p>
+                                    <div class="imgWrap">
+                                        <img src="./images/logo4.png" alt="">
+                                    </div>
+                                    <a href="product04.html">查看详情<i></i></a>
+                                </div>
+                                <div class="solveS1">
+                                    <h4>正巧</h4>
+                                    <p>再也不会因为忙而忘记联系！ </p>
+                                    <div class="imgWrap"><img src="./images/logo1.png" alt=""/></div>
+                                    <a href="product01.html">查看详情<i></i></a></div>
+                                <div class="solveS1">
+                                    <h4>乐见</h4>
+                                    <p>拍颜值和故事并存的音乐大片！ </p>
+                                    <div class="imgWrap">
+                                        <img src="./images/logo5-.png" alt="">
+                                    </div>
+                                    <a href="product05.html">查看详情<i></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="navPub3" class="navPub">
+                        <a class="navPuba slideChangeColor" href="server.html">维善服务</a>
+                        <i></i>
+                        <div id="solveWrap3" class="solveWrap3">
+                            <div class="solveSlide clearfix">
+                                <ul>
+                                    <li>
+                                        <h3>服务体系</h3>
+                                        <p>13年沉淀，策略、设计、研发</p>
+                                        <img src="images/f071.png" alt="">
+                                    </li>
+                                    <li>
+                                        <h3>服务承诺</h3>
+                                        <p>5大时效承诺，9重服务保障</p>
+                                        <img src="images/f074.png" alt="">
+                                    </li>
+                                    <li>
+                                        <h3>服务特色</h3>
+                                        <p>全程陪样，服务点评，定期回访</p>
+                                        <img src="images/f073.png" alt="">
+                                    </li>
+                                    <li>
+                                        <h3>服务优势</h3>
+                                        <p>全程培样，服务点评，定期回访</p>
+                                        <img src="images/f072.png" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="navPub">
+                        <a class="navPuba slideChangeColor" href="success.html">成功案例</a>
+                        <i></i>
+                    </li>
+                    <li class="navPub">
+                        <a class="navPuba slideChangeColor" href="company.html">合作伙伴</a>
+                        <i></i>
+                    </li>
+                    <li class="navPub">
+                        <a class="navPuba slideChangeColor" href="about.html">走进维善</a>
+                        <i></i>
+                    </li>
+                </ul>
+            </div>
+            <div id="subNav" class="subNav fr"></div>
+            <!--适配-->
+            <div class="hide" id="hide">
+                <a href="index.html">
+                    <div class="logo fl">
+                        <img src="./images/mobile-w.png" alt="">
+                    </div>
+                </a>
+                <div class="close fr"></div>
+                <ul>
+                    <a href="solve.html">
+                        <li>维善技术</li>
+                    </a>
+                    <a href="icon3.html">
+                        <li>维善产品</li>
+                    </a>
+                    <a href="server.html">
+                        <li>维善服务</li>
+                    </a>
+                    <a href="success.html">
+                        <li>成功案例</li>
+                    </a>
+                    <a href="company.html">
+                        <li>合作伙伴</li>
+                    </a>
+                    <a href="about.html">
+                        <li>走进维善</li>
+                    </a>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+

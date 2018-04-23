@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="idangerous.swiper.css">
+    <script src="idangerous.swiper.min.js"></script>
+    <script src="jq.js"></script>
+    <style>
+        .alphaWrap {
+            width: 500px;
+            height: 500px;
+            background-color: #CCCCCC;
+            margin:100px auto;
+            position: absolute;
+            left:50%;
+            top:50%;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            -moz-transform: translateX(-50%) translateY(-50%);
+            -ms-transform: translateX(-50%) translateY(-50%);
+            -o-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            z-index:111;
+        }
+        .alpha {
+            margin-top:-50px;
+            color: greenyellow;
+            background-color: rgba(0,0,0,0.3);
+            width:100px;
+            height: 100px;
+            position: relative;
+            z-index:88;
+        }
+        .pagination {
+            position: absolute;
+            left: 0;
+            text-align: center;
+            bottom: 5px;
+            width: 100%;
+            z-index: 999;
+        }
+        #banner {
+            width: 100%;
+            float: left;
+            height: 550px;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+        .swiper-pagination-switch {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 8px;
+            background: #555;
+            margin: 0 5px;
+            opacity: 0.8;
+            border: 1px solid #fff;
+            cursor: pointer;
+        }
+        .swiper-active-switch {
+            background: #fff;
+        }
+        #banner .arrow-left {
+            background: url(arrows.png) no-repeat left top;
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            margin-top: -15px;
+            width: 17px;
+            height: 30px;
+            z-index: 999;
+        }
+        #banner .arrow-right {
+            background: url(arrows.png) no-repeat left bottom;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            margin-top: -15px;
+            width: 17px;
+            height: 30px;
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+<!--<div class="alphaWrap">-->
+    <!--<div class="alpha">-->
+        <!--<br>-->
+        <!--<br>-->
+        <!--透明度设置-->
+    <!--</div>-->
+<!--</div>-->
+<div id="banner">
+    <a href="#" class="arrow-left"></a>
+    <a href="#" class="arrow-right"></a>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="../images/banner1.png" alt="" width="100%">
+            </div>
+            <div class="swiper-slide">
+                <img src="../images/banner2.png" alt="" width="100%">
+            </div>
+            <div class="swiper-slide">
+                <img src="../images/banner3.png" alt="" width="100%">
+            </div>
+        </div>
+    </div>
+    <div id="bannerpagination" class="pagination"></div>
+</div>
+
+
+<script>
+
+
+    var mySwiper = new Swiper('.swiper-container',{
+        mode:'horizontal',
+        loop: true,
+        autoplay:5000,
+        pagination: '#bannerpagination',
+        paginationClickable: true,
+        grabCursor : true,
+        progress:true,
+        onProgressChange: function(swiper){
+            for (var i = 0; i < swiper.slides.length; i++){
+                var slide = swiper.slides[i];
+                var progress = slide.progress;
+                var translate = progress*swiper.width;
+                var opacity = 1 - Math.min(Math.abs(progress),1);
+                slide.style.opacity = opacity;
+                swiper.setTransform(slide,'translate3d('+translate+'px,0,0)');
+            }
+        },
+        onTouchStart:function(swiper){
+            for (var i = 0; i < swiper.slides.length; i++){
+                swiper.setTransition(swiper.slides[i], 0);
+            }
+        },
+        onSetWrapperTransition: function(swiper, speed) {
+            for (var i = 0; i < swiper.slides.length; i++){
+                swiper.setTransition(swiper.slides[i], speed);
+            }
+        }
+    });
+
+//    $('.arrow-left').on('click', function(e){
+//        e.preventDefault()
+//        mySwiper.onProgressChange()
+//    })
+//    $('.arrow-right').on('click', function(e){
+//        e.preventDefault()
+//        mySwiper.onProgressChange()
+//    })
+
+//    function lazyLoadDemos() {
+//        $('.phone-box').each(function() {
+//            var frameHolder = $(this);
+//            if (frameHolder.hasClass('loaded')) return;
+//            var frame = frameHolder.find('iframe');
+//            var src = frame.attr('data-src');
+//            if (frameHolder.offset().top < ($(window).scrollTop() + $(window).height() + 50)) {
+//                frameHolder.addClass('loaded');
+//                frame.attr('src', src);
+//            }
+//        });
+//    }
+//    if ($('.phone-box').length > 0) {
+//        $('.phone-box').each(function() {
+//            var t = $(this);
+//            var demoFile = t.find('iframe').attr('data-src');
+//        });
+//        $(window).on('scroll resize', function() {
+//            lazyLoadDemos();
+//        });
+//        lazyLoadDemos();
+//    }
+
+    $(function () {
+        function myBrowser(){
+            var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+            alert(userAgent);
+            var isOpera = userAgent.indexOf("Opera") > -1; //判断是否Opera浏览器
+            var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera; //判断是否IE浏览器
+            alert(isIE)
+            if (isIE) {
+                var IE5 = IE55 = IE6 = IE7 = IE8 = IE9 = false;
+                var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+                reIE.test(userAgent);
+                var fIEVersion = parseFloat(RegExp["$1"]);
+                IE55 = fIEVersion == 5.5;
+                IE6 = fIEVersion == 6.0;
+                IE7 = fIEVersion == 7.0;
+                IE8 = fIEVersion == 8.0;
+                IE9 = fIEVersion == 9.0;
+                if (IE55) {
+                    return "IE55";
+                }
+                if (IE6) {
+                    return "IE6";
+                }
+                if (IE7) {
+                    return "IE7";
+                }
+                if (IE8) {
+                    return "IE8";
+                }
+                if (IE9) {
+                    return "IE9";
+                }
+            }//isIE end
+        }//myBrowser() end
+        myBrowser();
+        //以下是调用上面的函数
+//        if (myBrowser() == "IE55") {
+//            alert("我是 IE5.5");
+//        }
+//        if (myBrowser() == "IE6") {
+//            alert("我是 IE6");
+//        }
+//        if (myBrowser() == "IE7") {
+//            alert("我是 IE7");
+//        }
+//        if (myBrowser() == "IE8") {
+//            alert("我是 IE8");
+//        }
+//        if (myBrowser() == "IE9") {
+//            alert("我是 IE9");
+//        }
+    })
+</script>
+
+</body>
+</html>

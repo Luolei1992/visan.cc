@@ -1,0 +1,692 @@
+#about, .fifth .con, .fifth h3, .first .box, .fourth .title p, .imgBox div, .linkTo, .linkTo span.des, .test, .third .title p {
+    text-align: center
+}
+
+#about, nav li, nav li a {
+    position: relative
+}
+
+#about, #logo #header_img, .test {
+    border-radius: 50%
+}
+
+.section {
+    overflow: hidden;
+    font-family: inherit
+}
+
+.first {
+    background: url(../images/first.jpg);
+    color: #fff
+}
+
+.second {
+    background: url(../images/dark.jpg)
+}
+
+.third {
+    background: url(../images/second.jpg)
+}
+
+.fourth {
+    background: url(../images/third.jpg);
+    background-size: cover
+}
+
+.fifth {
+    background: url(../images/self.jpg) no-repeat;
+    background-size: 1400px auto;
+    color: #fff
+}
+
+#about h3, #about h4 {
+    color: #000;
+    font-weight: 700
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, .2);
+    padding-top: 5px;
+    padding-bottom: 5px
+}
+
+#logo {
+    float: left
+}
+
+#logo #header_img {
+    margin-left: 130px;
+    overflow: hidden;
+    transition: all 1s
+}
+
+#logo #header_img:hover {
+    box-shadow: 0 0 8px 2px #A4D9F9
+}
+
+#logo #header_img img {
+    width: 70px;
+    height: 70px
+}
+
+nav {
+    float: right;
+    margin-right: 100px
+}
+
+nav li {
+    float: left;
+    margin: 0 30px
+}
+
+nav li img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 5px;
+    left: 2px
+}
+
+nav li a {
+    padding-top: 50px;
+    display: block;
+    font-size: 16px;
+    color: #999;
+    z-index: 100
+}
+
+nav li a:hover {
+    color: #ff0
+}
+
+.first .box .pic img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    -webkit-transform: scale(.3) rotate(0);
+    -ms-transform: scale(.3) rotate(0);
+    transform: scale(.3) rotate(0)
+}
+
+.first .box .pic p {
+    font-size: 20px;
+    font-weight: 700;
+    opacity: 0
+}
+
+.first .box .line {
+    height: 2px;
+    background-color: #fff;
+    width: 0;
+    margin: 10px auto 15px
+}
+
+.first .box .txt .young {
+    font-size: 16px;
+    margin-bottom: 20px;
+    opacity: 0
+}
+
+.first .box .txt .pub {
+    font-size: 14px;
+    line-height: 30px;
+    -webkit-transform: translateY(1000px);
+    -ms-transform: translateY(1000px);
+    transform: translateY(1000px);
+    opacity: 0
+}
+
+.first.current .box .pic p, .first.current .box .txt .young {
+    opacity: 1;
+    transition: all 1s
+}
+
+.section.current .box .pic img {
+    -webkit-transform: scale(1) rotate(360deg);
+    -ms-transform: scale(1) rotate(360deg);
+    transform: scale(1) rotate(360deg);
+    transition: all 1s
+}
+
+.section.current .box .line {
+    width: 600px;
+    transition: all 1.2s
+}
+
+.section.current .box .txt .pub {
+    opacity: 1
+}
+
+.section.current .box .txt .name {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    transition: all .5s
+}
+
+.section.current .box .txt .age {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    transition: all .5s .3s
+}
+
+.section.current .box .txt .job {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    transition: all .8s .3s
+}
+
+.section.current .box .txt .email {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    transition: all 1.1s .3s
+}
+
+#about {
+    width: 380px;
+    height: 220px;
+    background: url(../images/wujiao.png) 5px 0 no-repeat #fff;
+    margin: 100px auto 0;
+    padding-top: 160px;
+    box-shadow: 0 0 25px 4px #fff
+}
+
+#about h3 {
+    font-size: 25px
+}
+
+#about .line1 {
+    width: 135px;
+    height: 2px;
+    background-color: #000;
+    margin: 10px auto 6px
+}
+
+.test, .test::before {
+    width: 80px;
+    height: 80px;
+    position: absolute
+}
+
+#about h4 {
+    font-size: 16px
+}
+
+.test {
+    background-color: #d1d1d1;
+    left: 133px;
+    top: -42px;
+    line-height: 1;
+    line-height: 80px;
+    box-shadow: 0 0 6px 4px #eaeaea;
+    border: 6px solid #C3CBD2
+}
+
+#test2 {
+    left: -32px;
+    top: 78px
+}
+
+#test3 {
+    left: 298px;
+    top: 78px
+}
+
+#test4 {
+    left: 30px;
+    top: 272px
+}
+
+#test5 {
+    left: 235px;
+    top: 272px
+}
+
+#test2 .sex, #test3 .hobby {
+    top: -8px;
+    transition: all 1s;
+    overflow: hidden
+}
+
+.test::before {
+    content: '';
+    border-radius: 50%;
+    background-color: #A9A9A9;
+    left: 0;
+    font-weight: 700;
+    opacity: 0;
+    transition: all 1s
+}
+
+#test1::before {
+    content: '本科'
+}
+
+#test2::before {
+    content: '纯爷们'
+}
+
+#test3::before {
+    content: '爱好'
+}
+
+#test4::before {
+    content: '北京'
+}
+
+#test5::before {
+    content: '求职'
+}
+
+.test:hover::before {
+    opacity: 1;
+    font-size: 25px;
+    background-color: #efefef;
+    box-shadow: 0 0 6px 4px #e7e1cd inset
+}
+
+#test2 .sex p, #test3 .hobby p {
+    font-size: 18px;
+    text-decoration: underline
+}
+
+#test2 .sex {
+    width: 0;
+    height: 190px;
+    position: absolute;
+    left: -170px;
+    background-color: #E0CDBE;
+    border-radius: 25px;
+    opacity: 0
+}
+
+#test2:hover .sex {
+    opacity: 1;
+    width: 145px;
+    height: 190px
+}
+
+#test2 .sex .jirou {
+    height: 120px;
+    width: 145px;
+    background: url(../images/jirou.jpg) no-repeat;
+    background-size: 145px 126px
+}
+
+#test2 .sex p {
+    line-height: 35px
+}
+
+#test3 .hobby {
+    width: 0;
+    height: 212px;
+    position: absolute;
+    right: -190px;
+    background-color: #0C5029;
+    border-radius: 40px;
+    opacity: 0
+}
+
+#test3 .hobby .taiqiu {
+    height: 112px;
+    width: 160px;
+    background: url(../images/taiqiu.jpg);
+    background-size: 160px 112px
+}
+
+#test3 .hobby p {
+    line-height: 25px;
+    color: #adff2f
+}
+
+#test3:hover .hobby {
+    width: 160px;
+    height: 212px;
+    opacity: 1
+}
+
+.third .title p {
+    font-size: 30px;
+    color: #fff
+}
+
+.third .title .line {
+    width: 0;
+    height: 2px;
+    margin: 5px auto;
+    background-color: #E0DFDF
+}
+
+.third .title .work {
+    width: 72px;
+    height: 14px;
+    color: red;
+    font-size: 14px;
+    margin: 0 auto;
+    opacity: 0
+}
+
+.third.current .line {
+    width: 155px;
+    transition: all 1s
+}
+
+.third.current .work {
+    opacity: 1;
+    transition: all 1s
+}
+
+.imgBox {
+    height: 400px;
+    width: 420px;
+    margin: 0 auto
+}
+
+.imgBox div {
+    width: 140px;
+    height: 140px;
+    float: left;
+    opacity: 0
+}
+
+.imgBox div:nth-child(3) {
+    -webkit-transform: translate(250px, 420px) rotate(360deg);
+    -ms-transform: translate(250px, 420px) rotate(360deg);
+    transform: translate(250px, 420px) rotate(360deg)
+}
+
+.imgBox div:nth-child(2) {
+    -webkit-transform: translate(211px, -282px) rotate(254deg);
+    -ms-transform: translate(211px, -282px) rotate(254deg);
+    transform: translate(211px, -282px) rotate(254deg)
+}
+
+.imgBox div:nth-child(1) {
+    -webkit-transform: translate(-304px, -178px) rotate(199deg);
+    -ms-transform: translate(-304px, -178px) rotate(199deg);
+    transform: translate(-304px, -178px) rotate(199deg)
+}
+
+.imgBox div:nth-child(4) {
+    -webkit-transform: translate(472px, -160px) rotate(-382deg);
+    -ms-transform: translate(472px, -160px) rotate(-382deg);
+    transform: translate(472px, -160px) rotate(-382deg)
+}
+
+.imgBox div:nth-child(5) {
+    -webkit-transform: translate(505px, 363px) rotate(-240deg);
+    -ms-transform: translate(505px, 363px) rotate(-240deg);
+    transform: translate(505px, 363px) rotate(-240deg)
+}
+
+.imgBox div:nth-child(6) {
+    -webkit-transform: translate(142px, 559px) rotate(360deg);
+    -ms-transform: translate(142px, 559px) rotate(360deg);
+    transform: translate(142px, 559px) rotate(360deg)
+}
+
+.imgBox div:nth-child(7) {
+    -webkit-transform: translate(-520px, 368px) rotate(225deg);
+    -ms-transform: translate(-520px, 368px) rotate(225deg);
+    transform: translate(-520px, 368px) rotate(225deg)
+}
+
+.section.current .imgBox div {
+    transition: all .5s linear;
+    opacity: 1
+}
+
+.section.current .imgBox div:nth-child(3) {
+    -webkit-transform: translate(-140px, 140px) rotate(0);
+    -ms-transform: translate(-140px, 140px) rotate(0);
+    transform: translate(-140px, 140px) rotate(0)
+}
+
+.section.current .imgBox div:nth-child(2) {
+    -webkit-transform: translate(1px, 17px) rotate(0);
+    -ms-transform: translate(1px, 17px) rotate(0);
+    transform: translate(1px, 17px) rotate(0)
+}
+
+.section.current .imgBox div:nth-child(1) {
+    -webkit-transform: translate(34px, 78px) rotate(0);
+    -ms-transform: translate(34px, 78px) rotate(0);
+    transform: translate(34px, 78px) rotate(0)
+}
+
+.section.current .imgBox div:nth-child(4) {
+    -webkit-transform: translate(247px, -60px) rotate(0);
+    -ms-transform: translate(247px, -60px) rotate(0);
+    transform: translate(247px, -60px) rotate(0)
+}
+
+.section.current .imgBox div:nth-child(5) {
+    -webkit-transform: translate(105px, 63px) rotate(0);
+    -ms-transform: translate(105px, 63px) rotate(0);
+    transform: translate(105px, 63px) rotate(0)
+}
+
+.section.current .imgBox div:nth-child(6) {
+    -webkit-transform: translate(-142px, 123px) rotate(0);
+    -ms-transform: translate(-142px, 123px) rotate(0);
+    transform: translate(-142px, 123px) rotate(0)
+}
+
+.section.current .imgBox div:nth-child(7) {
+    -webkit-transform: translate(33px, -80px) rotate(0);
+    -ms-transform: translate(33px, -80px) rotate(0);
+    transform: translate(33px, -80px) rotate(0)
+}
+
+.fourth .wraper {
+    width: 760px;
+    margin: 0 auto
+}
+
+.fourth .title p {
+    font-size: 30px;
+    font-weight: 700
+}
+
+.fourth .title .line {
+    width: 0;
+    height: 2px;
+    margin: 5px auto;
+    background-color: #423E3E
+}
+
+.fourth .title .work {
+    width: 72px;
+    height: 14px;
+    color: red;
+    font-size: 14px;
+    margin: 0 auto 25px;
+    opacity: 0
+}
+
+.fourth.current .line {
+    width: 155px;
+    transition: all 1s
+}
+
+.fourth.current .work {
+    opacity: 1;
+    transition: all 1s
+}
+
+.fourth .obj {
+    float: left;
+    margin: 25px;
+    border: 1px solid #fff;
+    box-shadow: 4px 5px 28px #000;
+    overflow: hidden
+}
+
+.fourth .obj a {
+    display: block;
+    position: relative
+}
+
+.fourth .obj p {
+    font-size: 20px;
+    color: #000;
+    font-weight: 700;
+    position: absolute;
+    top: 40px;
+    left: 59px;
+    opacity: 0;
+    -webkit-transform: translateY(-100px);
+    -ms-transform: translateY(-100px);
+    transform: translateY(-100px);
+    transition: all .5s ease-in-out
+}
+
+.fourth .obj .cover {
+    width: 200px;
+    height: 153px;
+    background-color: rgba(255, 0, 0, 0);
+    transition: all 1s ease-in-out;
+    position: absolute
+}
+
+.fourth .obj a:hover .cover {
+    background-color: rgba(255, 0, 0, .3);
+    transition: all 1s ease-in-out
+}
+
+.fourth .obj3 p {
+    left: 73px
+}
+
+.fourth .obj .lock {
+    position: absolute;
+    bottom: 35px;
+    left: 72px;
+    -webkit-transform: translateY(100px);
+    -ms-transform: translateY(100px);
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all .5s ease-in-out
+}
+
+.fourth .obj a:hover .lock, .fourth .obj a:hover p {
+    opacity: 1;
+    transition: all .5s ease-in-out;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0)
+}
+
+.fifth h3 {
+    font-size: 30px;
+    font-weight: 200
+}
+
+.fifth .line {
+    height: 2px;
+    width: 0;
+    margin: 5px auto;
+    background-color: #423E3E
+}
+
+.fifth .con {
+    color: red;
+    margin-bottom: 50px;
+    opacity: 0
+}
+
+.linkTo .subWrap {
+    margin: 10px auto
+}
+
+.linkTo span {
+    display: inline-block
+}
+
+.linkTo span.iconfont {
+    font-size: 40px;
+    color: #9acd32
+}
+
+.linkTo span.des {
+    font-size: 30px;
+    border-bottom: 2px solid #423E3E;
+    width: 320px
+}
+
+.linkTo span.email {
+    color: #DF9800
+}
+
+.linkTo span.name {
+    color: #666
+}
+
+.linkTo .connect {
+    width: 350px
+}
+
+.linkTo .subWrap .pic1 {
+    margin-right: 25px;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0)
+}
+
+.linkTo .subWrap .pic2 {
+    float: right;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0)
+}
+
+.linkTo .msg1 {
+    -webkit-transform: rotate(-65deg) translate(2000px, -200px);
+    -ms-transform: rotate(-65deg) translate(2000px, -200px);
+    transform: rotate(-65deg) translate(2000px, -200px)
+}
+
+.linkTo .msg2 {
+    -webkit-transform: rotate(0) translate(2000px, 0);
+    -ms-transform: rotate(0) translate(2000px, 0);
+    transform: rotate(0) translate(2000px, 0)
+}
+
+.linkTo .msg3 {
+    -webkit-transform: rotate(65deg) translate(2000px, 200px);
+    -ms-transform: rotate(65deg) translate(2000px, 200px);
+    transform: rotate(65deg) translate(2000px, 200px)
+}
+
+.fifth.current .line {
+    width: 130px;
+    transition: all 1s
+}
+
+.fifth.current .con {
+    opacity: 1;
+    transition: all 1s linear .3s
+}
+
+.fifth.current .linkTo .msg1, .fifth.current .linkTo .msg2, .fifth.current .linkTo .msg3 {
+    -webkit-transform: rotate(0) translate(0, 0);
+    -ms-transform: rotate(0) translate(0, 0);
+    transform: rotate(0) translate(0, 0);
+    transition: all 1s
+}
+
+.fifth.current .linkTo .pic1, .fifth.current .linkTo .pic2 {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    transition: all 1s linear 1s
+}

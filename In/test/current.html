@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="./test.js"></script>
+</head>
+<script>
+//    当前元素的标签高亮显示
+    function nav(name, csskey,cssvalue) {
+        var url = window.location.pathname + window.location.search;
+        console.log(url);
+        console.log(window.location.pathname);
+        console.log(window.location.search);
+        var arr = url.split("/");
+        var v1 = "";
+        $(name).each(function (i) {
+            v1 = $(this).attr("href");
+            if (v1 == arr[i]) {
+                console.log($(this));
+                $(this).css(csskey, cssvalue);
+            };
+
+        })
+    };
+    $(function () {
+        nav(".top ul li a", "background-color", "red");
+    })
+</script>
+
+<body>
+<div class="top">
+    <ul>
+        <li><a href="alert.html">弹出</a></li>
+        <li><a href="current.html">浮动</a></li>
+        <li><a href="scale.html">缩放</a></li>
+        <li><a href="text.html">测试</a></li>
+    </ul>
+</div>
+
+</body>
+</html>
+

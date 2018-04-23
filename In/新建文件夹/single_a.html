@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>极影科技</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/index.js"></script>
+    <style>
+        .pros i {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+    <?php get_header(); ?>
+</div>
+
+<div class="banxin">
+    <!-- Column 1 /Content -->
+    <?php if (have_posts()) : the_post(); update_post_caches($posts); ?>
+        <div class="grid_8">
+            <!-- Blog Post -->
+            <div class="post">
+
+                <div class="pros">
+                    <!-- Post Content -->
+                    <?php echo $post->post_content;?>
+                </div>
+
+            </div>
+        </div>
+    <?php else : ?>
+        <div class="errorbox">
+            没有文章！
+        </div>
+    <?php endif; ?>
+</div>
+<div class="footer_on">
+    <?php get_footer(); ?>
+</div>
+
+</body>
+</html>

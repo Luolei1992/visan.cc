@@ -1,0 +1,358 @@
+.news_p {
+    width: 1160px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+/*.news img{ padding-left:26px;padding-right:26px;}*/
+
+.news_p .news_p_title {
+    width: 100%;
+    font-size: 28px;
+    font-family: "微软雅黑";
+    color: #4c4c4c;
+    line-height: 40px;
+    padding: 39px 0;
+    text-align: center;
+}
+
+.news_p dl {
+    display: block;
+    width: 33.33%;
+    float: left;
+    margin-top: 6px;
+    position: relative;
+    overflow: hidden;
+}
+
+.news_p dl dd {
+    display: block;
+    clear: both;
+    /*width: 372px;*/
+    font-family: "微软雅黑";
+    font-size: 14px;
+    font-weight: normal;
+    color: #454545;
+    text-align: left;
+    padding-top: 12px;
+    line-height: 24px
+}
+
+.news_p dl em {
+    display: block;
+    font-family: "微软雅黑";
+    font-size: 12px;
+    font-weight: normal;
+    color: #929292;
+    font-style: normal;
+    text-align: left;
+    clear: both;
+    line-height: 20px;
+}
+
+.news_p dl dt {
+    width: 100%;
+    margin:0 5px;
+}
+.news_p_title_p {
+    width: 50% !important;
+}
+.news_p dl dt img {
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+.news_p ul li {
+    float: left;
+    margin-right: 53px;
+    margin-bottom: 60px
+}
+
+.news_p .minus_1 {
+    margin-right: 0px;
+}
+
+.news_p ul li img {
+    float: left;
+}
+
+
+/*newD.css*/
+
+.news_detail {
+    width: 62.5%;
+    margin: 0 auto;
+}
+
+.news_detail p {
+    line-height: 30px;
+    font-size: 14px;
+    color: #666666;
+}
+
+.news_detail span {
+    margin-top: 20px;
+}
+
+.news_detail img {
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.news_d1 {
+    width: 500px;
+    margin: 0 auto;
+    border-bottom: 1px solid #CCC;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.news_d1 h3 {
+    font-weight: normal;
+    text-align: center;
+    font-size: 18px;
+    color: #1c1c1c;
+}
+
+.author {
+    margin-top: 20px;
+    margin-bottom: 42px;
+}
+
+.author p {
+    text-align: center;
+}
+
+.news_d2 p {
+    text-indent: 40px;
+    line-height: 32px;
+    margin: 0 auto;
+}
+
+.news_d3 {
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+
+.news_d3 p {
+    text-align: right;
+}
+
+.news_d3 a:link {
+    color: #121111;
+    text-decoration: none;
+}
+
+.changeBox {
+    position: absolute;
+    width: 372px;
+    height: 294px;
+    left: 0px;
+    top: 0px;
+    display: none;
+}
+
+.boxinline {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.boxinline span:hover {
+    transition: .5s all;
+    -webkit-transition: .5s all;
+    -o-transition: .5s all;
+    -ms-transition: .5s all;
+    -moz-transition: .5s all;
+}
+
+.boxinline a:hover {
+    color: #39c9da;
+    transition: .5s all;
+    -webkit-transition: .5s all;
+    -o-transition: .5s all;
+    -ms-transition: .5s all;
+    -moz-transition: .5s all;
+}
+
+.squares {
+    width: 372px;
+    height: 271px;
+    background: url(../images/view_bj.png) no-repeat;
+    opacity: .9;
+    position: absolute;
+    z-index: 300;
+    left: 0px;
+    top: -298px;
+}
+
+.squares p {
+    display: block;
+    font-size: 14px;
+    line-height: 24px;
+    padding-bottom: 25px;
+    padding-top: 5px;
+    color: white
+}
+
+.squares span {
+    display: block;
+    margin: 0 auto;
+    width: 52px;
+    margin-top: 107px;
+    height: 52px;
+    background: url(../images/view.png) no-repeat;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    cursor: pointer
+}
+
+.footBox_contact {
+    width: 100%;
+    background-color: #fafafa;
+}
+
+.contact_infor {
+    width: 1138px;
+    margin: 0 auto;
+}
+
+.contact_infor ul {
+    width: 100%;
+    overflow: hidden
+}
+
+.contact_infor ul li {
+    float: left;
+    width: 240px;
+    padding-bottom: 40px;
+    margin-left: 26px;
+    margin-right: 28px;
+}
+
+.contact_infor ul li p {
+    width: 100%;
+    overflow: hidden;
+    line-height: 28px
+}
+
+.contact_infor ul li p span {
+    display: block;
+    float: left;
+    font-size: 14px;
+    color: #515151;
+    margin-left: 45px
+}
+
+.contact_infor ul li .img {
+    width: 100%;
+    padding: 44px 0 34px 0;
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 23px
+}
+
+.contact_infor ul li .img img {
+    display: block;
+    margin: 0 auto
+}
+
+.contact_infor ul li .contact_xq {
+    font-size: 12px;
+    color: #797979;
+    margin-left: 12px
+}
+
+.fuwu {
+    width: 1138px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.fuwu ul {
+    overflow: hidden
+}
+
+.fuwu ul li {
+    text-align: center;
+    width: 20%;
+    float: left;
+}
+
+.fuwu ul li h4 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #080808;
+    line-height: 32px
+}
+
+.fuwu ul li a {
+    color: #929292;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.fuwu ul li a:hover {
+    color: #fb7802;
+    text-decoration: none;
+    transition: .5s all;
+    -webkit-transition: .5s all;
+    -o-transition: .5s all;
+    -ms-transition: .5s all;
+    -moz-transition: .5s all;
+}
+
+.scrolled {
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-width: 1138px;
+    transition: .5s all;
+    -webkit-transition: .5s all;
+    -o-transition: .5s all;
+    -ms-transition: .5s all;
+    -moz-transition: .5s all;
+    background-color: #fff;
+    z-index: 9999;
+    height: 60px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10)!important;
+}
+
+.scrolled #nav {
+    margin-top: 18px;
+    transition: .5s all;
+    -webkit-transition: .5s all;
+    -o-transition: .5s all;
+    -ms-transition: .5s all;
+    -moz-transition: .5s all;
+}
+
+.scrolled #nav li a {
+    color: #4c4c4c
+}
+
+.scrolled #nav li a:hover {
+    color: #fb7802;
+    text-decoration: none;
+    transition: .5s all;
+    -webkit-transition: .5s all;
+    -o-transition: .5s all;
+    -ms-transition: .5s all;
+    -moz-transition: .5s all;
+}
+
+.scrolled .logo {
+    background: url(../images/logo_xiala.png) no-repeat;
+    width: 112px;
+    height: 26px;
+    margin-top: 17px;
+    transition: .5s all;
+    -webkit-transition: .5s all;
+    -o-transition: .5s all;
+    -ms-transition: .5s all;
+    -moz-transition: .5s all;
+}

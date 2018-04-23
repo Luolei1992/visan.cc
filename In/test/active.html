@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        ul li {
+            list-style:none;
+            width: 100%;
+        }
+        img {
+            width: 100%;
+        }
+    </style>
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script>
+        $(function () {
+            var url = "./active.json";
+            $.getJSON(　　　　 //使用getJSON方法取得JSON数据
+                    url,
+                    function (data) { //处理数据 data指向的是返回来的JSON数据
+//                        console.log(data[0].src[2]);
+                        var lis = "";
+
+//                        js的for循环方法
+                        for (var i = 0;i < data[0].src.length;i++){
+//                            console.log(data[0].src[i][i]);
+                            lis += '<li>'+
+                                    '<img src='+(data[0].src[i][i])+' alt="">'+
+                                    '<p>'+data[1].txt[i][1]+'</p>'+
+                                    '</li>'
+                        };
+                        $("ul").html(lis);
+                    }
+            )
+        })
+    </script>
+</head>
+
+<body>
+<div class="box">
+    <a href="#"></a>
+    <ul>
+        <!--<li>-->
+            <!--<img src="../images/icon01.png" alt="">-->
+            <!--<p></p>-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<img src="../images/icon02.png" alt="">-->
+            <!--<p></p>-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<img src="../images/icon03.png" alt="">-->
+            <!--<p></p>-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<img src="../images/icon04.png" alt="">-->
+            <!--<p></p>-->
+        <!--</li>-->
+    </ul>
+    <div class="link"></div>
+</div>
+</body>
+</html>

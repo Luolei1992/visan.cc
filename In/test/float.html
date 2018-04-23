@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .a ,.c {
+        float: left;
+    }
+    .b {
+        margin-top:10px;
+    }
+    .clearfix:after{
+        content:".";
+        display:block;
+        height:0;
+        clear:both;
+        visibility:hidden;
+
+    }
+    .clearfix {
+        zoom: 1;
+    }
+</style>
+<body>
+<div class="a">
+    <img src="9.jpg" alt="">
+</div>
+<div class="a">
+    <img src="9.jpg" alt="">
+</div>
+<div class="a">
+    <img src="9.jpg" alt="">
+</div>
+
+
+<div class="b clearfix">
+    <img src="9.jpg" alt="">
+</div>
+
+
+<div class="c">
+    <img src="9.jpg" alt="">
+</div>
+
+
+<div class="companyShow">
+    <h3 class="companyTitle">Motorala 杭州</h3>
+    <p>总部设在美国伊利诺伊州绍姆堡.位于芝加哥市郊.世界财富百强企业之一...</p>
+    <h3 class="companyTitle">合作规模:20万元</h3>
+    <a href="www.motorola.com.cn">www.motorola.com.cn</a>
+</div>
+</body>
+</html>
